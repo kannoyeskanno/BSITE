@@ -1,0 +1,31 @@
+@import '../../assets/styles/variables.css';
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: var(--header-font-size);
+  color: var(--light-color);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item .nav-link {
+  color: var(--light-color);
+  font-size: var(--text-font-size);
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.navbar {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
