@@ -4,16 +4,22 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <header className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <header className="navbar navbar-expand-lg">
       <div className="container">
         <h1 className="navbar-brand">DQLNHS Basketball Development</h1>
         <nav className="navbar-nav">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/home" className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/assessment" className="nav-link">Assessment</Link>
+              <Link to="/equipment" className="nav-link">Equipments</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/strategies" className="nav-link">Strategies</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/facility" className="nav-link">Facility</Link>
             </li>
           </ul>
         </nav>

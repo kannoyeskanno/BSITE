@@ -1,0 +1,149 @@
+.homepage-container .view1, .view3, .view4 {
+    height: 100vh;
+}
+
+.homepage-container .view2 {
+    height: 70vh;
+    background-color: var(--primary-color);
+    color: var(--primary-color-darker);
+}
+
+.homepage-container .view3 {
+    background-color: var(--primary-color-darker);
+}
+
+.homepage-container .view1 {
+    display: flex;
+    justify-content: end;
+    padding: 0 20rem 0 0;
+}
+
+.homepage-container .view1 img {
+}
+
+.home-text {
+    margin-top: 10rem;
+}
+
+.home-text h1 {
+    font-size: 180px;
+    font-style: bold;
+    border-bottom: solid var(--primary-color);
+}
+
+.home-text p {
+    font-size: 40px;
+    color: var(--primary-color);
+    border-left: solid var(--main-color);
+    margin-left: 2rem;
+    padding-left: 1rem;
+}
+
+.homepage-container .view2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5rem 1rem 5rem;
+}
+
+.homepage-container .view2 .img-container1 {
+    height: 400px;
+    width: 500px;
+}
+
+.homepage-container .view2 .img-container1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.homepage-container .view2 .text-intro h1 {
+    font-size: 2rem;
+}
+
+.homepage-container .view2 .text-intro p {
+    font-size: 1rem;
+}
+
+.homepage-container .view2 .text-intro h1, p {
+    color: var(--primary-color-darker);
+}
+
+.introduction a {
+    color: var(--primary-color);
+    background-color: var(--main-color);
+    border-radius: 18px;
+    padding: .6rem;
+    text-decoration: none;
+}
+
+.scroll-item {
+    background-color: var(--primary-color);
+    height: 350px;
+    width: 340px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-item .item-content {
+    flex: 1;
+}
+
+.scroll-item .item-footer {
+    padding: 1rem 0 0 0;
+    border-top: 1px solid var(--primary-color-darker);
+    margin-top: auto;
+}
+.item-footer .action-buttons a {
+    text-decoration: none;
+    padding: .6rem;
+    border: solid var(--primary-color-darker);
+    border-radius: 1rem;
+    color: var(--primary-color-darker);
+    margin: .5rem;
+    font-size: 1rem;
+}
+
+.view3 .text-title h1, p{
+    color: var(--primary-color);
+
+}
+
+.view4 {
+    background-color: var(--primary-color);
+    padding: 1rem 4.3rem;
+    border: solid;
+    display: flex;
+    gap: 10rem;
+}
+
+.faq-items  {
+    gap: .8rem;
+    display: flex;
+    font-weight: 600;
+    color: var(--primary-color-darker);
+}
+
+.faq h1{
+    color: var(--primary-color-darker);
+    font-style: bold;
+}
+
+.comment-view {
+    border: solid;
+    padding: 1rem;
+}
+
+.comment-card-container {
+    width: 35vw;
+
+    border: solid red;
+}

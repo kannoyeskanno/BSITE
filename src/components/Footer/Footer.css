@@ -1,0 +1,25 @@
+.footer-contents-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-socials {
+    text-align: right;
+    color: var(--primary-color-darker);
+  }
+  
+  .footer-socials h2 {
+    color: var(--primary-color-darker);
+    font-size: 1rem;
+  }
+  
+  .social-platforms i {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .bsite h1 {
+    color: var(--primary-color-darker);
+  }
+  

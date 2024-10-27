@@ -1,8 +1,12 @@
 @import '../../assets/styles/variables.css';
 
 header {
-  background-color: var(--primary-color);
   padding: 1rem 0;
+  
+}
+
+.navbar {
+  background-color: #020001;
 }
 
 .navbar-brand {
@@ -12,12 +16,14 @@ header {
 
 .navbar-nav {
   margin-left: auto;
+  width: 60%;
+  gap: 15%;
+  justify-content: flex;
 }
 
 .nav-item .nav-link {
   color: var(--light-color);
   font-size: var(--text-font-size);
-  margin-right: 1rem;
   transition: color 0.3s ease;
 }
 
