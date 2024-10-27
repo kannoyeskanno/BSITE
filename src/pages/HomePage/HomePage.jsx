@@ -2,24 +2,22 @@ import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import Background1 from "../../assets/images/img1home.jpg";
 import Img1 from "../../assets/images/img1.png";
-import { ref, push, onValue } from "firebase/database"; // Import Firebase functions
-import { database } from "../../firebase"; // Import the initialized database
+import { ref, push, onValue } from "firebase/database"; 
+import { database } from "../../firebase"; 
 
 const HomePage = () => {
-  const [comments, setComments] = useState([]); // State to hold fetched comments
-  const [newComment, setNewComment] = useState(""); // State to hold the new comment input
+  const [comments, setComments] = useState([]); 
+  const [newComment, setNewComment] = useState(""); 
 
-  // Fetch comments from Firebase Realtime Database
   useEffect(() => {
     const commentsRef = ref(database, "comments/");
     onValue(commentsRef, (snapshot) => {
       const data = snapshot.val();
       const fetchedComments = data ? Object.values(data) : [];
-      setComments(fetchedComments); // Update state with fetched comments
+      setComments(fetchedComments); 
     });
   }, []);
 
-  // Handle adding a new comment
   const handleAddComment = () => {
     if (newComment.trim() !== "") {
       const commentsRef = ref(database, "comments/");
@@ -27,7 +25,7 @@ const HomePage = () => {
         text: newComment,
         timestamp: new Date().toLocaleString(),
       });
-      setNewComment(""); // Clear input after adding the comment
+      setNewComment("");
     }
   };
 
@@ -73,7 +71,11 @@ const HomePage = () => {
       <div className="view3" id="learn-more">
         <div className="text-title">
           <h1>Free tips and tricks</h1>
-          <p>Your Ultimate Guide to Everything Basketball...</p>
+          <p>
+
+          Your Ultimate Guide to Everything <br /> Basketball: Rules, Strategies, Equipment, <br /> and More
+
+          </p>
         </div>
       </div>
 
@@ -109,34 +111,44 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="comment-view">
-          <div className="comment-card-container">
-                   <h1>Comments</h1>
-          <div className="comment-container">
-            {comments.length > 0 ? (
-              comments.map((comment, index) => (
-                <div key={index} className="comment">
-                  <p>{comment.text}</p>
-                  <small>{comment.timestamp}</small>
-                </div>
-              ))
-            ) : (
-              <p>No comments yet</p>
-            )}
-          </div>
 
-          <div className="comment-input">
-            <input
-              type="text"
-              placeholder="Add a comment"
-              value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
-            />
-            <button onClick={handleAddComment}>Add Comment</button>
-          </div>
-          </div>
-   
+        <div className="comment-view">
+      <div className="comment-card-container">
+        <h2 className="comments-title">Comments</h2>
+        <div className="comment-container">
+          {comments.length > 0 ? (
+            comments.map((comment, index) => (
+              <div key={index} className="comment-card">
+                <div className="comment-profile">
+                  <div className="profile-image"></div>
+                  <div>
+                    <h3 className="comment-user">{comment.user}</h3>
+                    <small className="comment-timestamp">{comment.timestamp}</small>
+                  </div>
+                </div>
+                <p className="comment-text">{comment.text}</p>
+              </div>
+            ))
+          ) : (
+            <p className="no-comments">No comments yet</p>
+          )}
         </div>
+
+        <div className="comment-input">
+          <input
+            type="text"
+            placeholder="Add a comment"
+            value={newComment}
+            onChange={(e) => setNewComment(e.target.value)}
+          />
+          <button onClick={handleAddComment} className="add-comment-button">
+            Add Comment
+          </button>
+        </div>
+      </div>
+    </div>
+
+      
       </div>
     </div>
   );
